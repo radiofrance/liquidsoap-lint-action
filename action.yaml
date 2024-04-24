@@ -1,0 +1,19 @@
+name: Test for Liquidsoap
+description: Run tests for Liquidsoap scripts
+
+inputs:
+  inventory:
+    description: "Inventory to be used in test"
+    required: true
+
+  script:
+    description: "Script to be tested"
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'docker://savonet/liquidsoap:v2.2.4'
+  args: 
+   - -c
+   - ${{ inputs.inventory }}
+   - ${{ inputs.script }}
