@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
-      - uses: ./.github/actions/liquidsoap-lint-action
+      - uses: radiofrance/liquidsoap-lint-action@main
         with:
           inventory: './example/liquidsoap/myradio.liq'
           script: './scripts/transcoder/00-live.liq'         
