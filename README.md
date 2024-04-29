@@ -22,14 +22,12 @@ jobs:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       - uses: radiofrance/liquidsoap-lint-action@main
         with:
-          inventory: './example/liquidsoap/myradio.liq'
-          script: './scripts/transcoder/00-live.liq'         
+          scripts: './example/liquidsoap/myradio.liq ./scripts/transcoder/00-live.liq'         
 ```
 
 ## Inputs
 
 | Field | Description | Required | Default |
 |-------|-------------|:--------:|---------|
-| `inventory` | Your channel inventory | :white_check_mark: | |
-| `script` | Your script to test | :white_check_mark: | |
+| `scripts` | Your script to test | :white_check_mark: | |
 
